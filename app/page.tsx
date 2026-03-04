@@ -126,22 +126,25 @@ export default function Home() {
 
       <section
         ref={leavesRef}
-        className="h-screen relative bg-linear-to-l  from-[#FFFEFE26] to-[#DFE2D2] text-[#4E482E] flex items-center justify-center"
+        className="h-screen relative bg-linear-to-l from-[#FFFEFE26] to-[#DFE2D2] text-[#4E482E] flex items-center justify-center"
       >
-        <h1 className="text-[#4E482E] absolute text-9xl w-2/3 text-right top-1/6 right-1/8 font-400">
+        <h1 className="text-[#4E482E] absolute text-9xl w-2/3 text-right top-1/6 right-1/8 font-400 z-40">
           Calmed by <span className="font-extrabold">Ashwagandha</span>
         </h1>
-        <img
-          src="/images/leaves/leaf1.png"
-          className="leaf leaf-3 absolute w-160 -bottom-7/14 left-46 rotate-20"
+
+        <div
+          className="leaf leaf-3 absolute md:w-200 lg:w-220 aspect-square -bottom-6/14 md:left-46 lg:left-55 rotate-20
+    bg-[url('/images/leaves/leaf1.png')] bg-contain bg-no-repeat bg-center"
         />
-        <img
-          src="/images/leaves/leaf3.png"
-          className="leaf leaf-2 absolute w-200 -top-170 -left-110 rotate-120"
+
+        <div
+          className="leaf leaf-2 absolute w-200 aspect-square -top-90 -left-110 rotate-120
+    bg-[url('/images/leaves/leaf3.png')] bg-contain bg-no-repeat bg-center"
         />
-        <img
-          src="/images/leaves/leaf3.png"
-          className="leaf leaf-4 absolute w-180 -bottom-180 -right-1/12 z-40"
+
+        <div
+          className="leaf leaf-4 absolute w-180 aspect-square -bottom-130 -right-1/12 z-50
+    bg-[url('/images/leaves/leaf3.png')] bg-contain bg-no-repeat bg-center"
         />
       </section>
 

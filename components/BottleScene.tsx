@@ -37,14 +37,14 @@ export default function BottleScene() {
         duration: 1,
       })
       .to(bottle, {
-        rotate: "-=45",
-        scale: 1.52,
-        y: "6vh",
-        x: "10vw",
+        rotate: "-=65",
+        scale: 1.8,
+        y: "14vh",
+        x: "14vw",
         duration: 1,
       })
       .to(bottle, {
-        rotate: "-=110",
+        rotate: "-=95",
         y: "-40vh",
         x: "-1vw",
         scale: 1.22,
