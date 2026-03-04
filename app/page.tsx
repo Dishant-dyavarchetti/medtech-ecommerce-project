@@ -6,13 +6,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Lexend } from "next/font/google";
 import { use, useEffect, useRef } from "react";
-
-import { ReactLenis } from "lenis/react";
-import Lenis from "lenis";
 import Image from "next/image";
-
-import Cal, { getCalApi } from "@calcom/embed-react";
-import Footer from "@/components/layout/Footer";
 
 // import Image from "next/image";
 
@@ -24,23 +18,6 @@ export default function Home() {
   const fadeBg = useRef<HTMLDivElement>(null);
   const amlaRef = useRef<HTMLDivElement>(null);
   const leavesRef = useRef<HTMLDivElement>(null);
-  const lenisRef = useRef<any>(null);
-
-  useEffect(() => {
-    const lenis = new Lenis({
-      autoRaf: true,
-      duration: 1.5,
-      prevent: (node) => node.id === "get_burger-content",
-    });
-
-    function update(time: any) {
-      lenisRef.current?.lenis?.raf(time * 1000);
-    }
-
-    gsap.ticker.add(update);
-
-    return () => gsap.ticker.remove(update);
-  });
 
   useGSAP(() => {
     const bg = fadeBg.current;
@@ -106,7 +83,6 @@ export default function Home() {
 
   return (
     <main className={`bg-white ${lexend.className} overflow-hidden`}>
-      <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
 
       <Navbar />
 
@@ -122,47 +98,32 @@ export default function Home() {
         </h1>
       </section>
 
-      <section
-        ref={amlaRef}
-        className="h-screen relative bg-linear-to-l  from-[#FFFEFE26] to-[#DFE2D2] text-[#4E482E] flex items-center justify-center"
-      >
-        <h1 className="text-pretty text-[160px] leading-tight font-normal w-1/6 absolute left-70 top-30 text-6xl">
-          Rooted in <span className="font-extrabold">Amla</span>
-        </h1>
-        <img
-          src="/images/amla.png"
-          className="amla amla-1 absolute w-80 -top-40 left-10"
-        />
-        <img
-          src="/images/amla.png"
-          className="amla amla-2 absolute w-62 bottom-10 -left-10 rotate-300"
-        />
-        <img
-          src="/images/amla.png"
-          className="amla amla-3 absolute w-66 top-1/6 -right-20 rotate-320"
-        />
-        <img
-          src="/images/amla.png"
-          className="amla amla-4 absolute w-68 bottom-10 right-3/12 rotate-120"
-        />
-        {/* -- */}
-        <img
-          src="/images/amla.png"
-          className="amla amla-1 absolute w-60 top-3/10 left-3/14 rotate-18"
-        />
-        <img
-          src="/images/frontAmla.png"
-          className="amla amla-2 absolute w-62 z-40 -bottom-36 left-4/10 rotate-104"
-        />
-        <img
-          src="/images/frontAmla.png"
-          className="amla amla-3 absolute w-66 top-3/7 right-7/16"
-        />
-        <img
-          src="/images/frontAmla.png"
-          className="amla amla-4 absolute w-68 -bottom-40 right-1/10 rotate-140"
-        />
-      </section>
+<section
+  ref={amlaRef}
+  className="h-screen relative bg-linear-to-l from-[#FFFEFE26] to-[#DFE2D2] text-[#4E482E] flex items-center justify-start"
+>
+  <h1 className="text-pretty md:text-[100px] lg:text-[140px] md:pl-20 lg:pl-40 font-light w-1/6 text-left text-5xl z-40">
+    Rooted in <span className="font-extrabold">Amla</span>
+  </h1>
+
+  <div className="bg-[url('/images/amla.png')] bg-center bg-no-repeat bg-contain amla absolute md:w-60 lg:w-80 aspect-square top-100 left-20 z-10"/>
+
+  <div className="bg-[url('/images/amla.png')] bg-center bg-no-repeat bg-contain amla absolute md:w-40 lg:w-62 aspect-square bottom-10 -left-10 rotate-300 z-10"/>
+
+  <div className="bg-[url('/images/amla.png')] bg-center bg-no-repeat bg-contain amla absolute md:w-40 lg:w-66 aspect-square top-1/6 -right-20 rotate-320 z-10"/>
+
+  <div className="bg-[url('/images/amla.png')] bg-center bg-no-repeat bg-contain amla absolute md:w-40 lg:w-68 aspect-square bottom-10 right-3/12 rotate-120 z-10"/>
+
+  {/* -- */}
+
+  <div className="bg-[url('/images/amla.png')] bg-center bg-no-repeat bg-contain amla absolute w-60 aspect-square top-3/10 left-3/14 rotate-18 z-10"/>
+
+  <div className="bg-[url('/images/frontAmla.png')] bg-center bg-no-repeat bg-contain amla absolute w-62 aspect-square -bottom-36 left-4/10 rotate-104 z-10"/>
+
+  <div className="bg-[url('/images/frontAmla.png')] bg-center bg-no-repeat bg-contain amla absolute w-66 aspect-square top-3/7 right-7/16 z-10"/>
+
+  <div className="bg-[url('/images/frontAmla.png')] bg-center bg-no-repeat bg-contain amla absolute w-68 aspect-square -bottom-40 right-1/10 rotate-140 z-10"/>
+</section>
 
       <section
         ref={leavesRef}
