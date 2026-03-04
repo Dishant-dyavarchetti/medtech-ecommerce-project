@@ -29,8 +29,8 @@ export default function BottleScene() {
     if (isMobile) {
       tl.fromTo(
         bottle,
-        { y: 72, x: 50, opacity: 1, rotate: 82 },
-        { y: 0, opacity: 1, rotate: 45, duration: 1, scale: 1.5 },
+        { y: -20, x: 50, opacity: 1, rotate: 82 },
+        { y: -80, opacity: 1, rotate: 45, duration: 1, scale: 1.5 },
       )
         .to(bottle, {
           rotate: "-=80",
@@ -48,7 +48,7 @@ export default function BottleScene() {
         })
         .to(bottle, {
           rotate: 0,
-          yPercent: 0,
+          yPercent: 10,
           xPercent: -20,
           scale: 1.4,
           duration: 1,
