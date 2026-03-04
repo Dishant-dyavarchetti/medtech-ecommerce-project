@@ -30,9 +30,9 @@ export default function BottleScene() {
       { y: "0vh", opacity: 1, rotate: 45, duration: 1, scale: 1.35 },
     )
       .to(bottle, {
-        rotate: "-=80",
-        scale: 1.45,
-        y: "16vh",
+        rotate: "-=65",
+        scale: 2.4,
+        y: "40vh",
         x: "20vw",
         duration: 1,
       })
