@@ -142,7 +142,7 @@ export default function Home() {
         />
 
         <div
-          className="leaf leaf-4 absolute w-[110vw] sm:w-[140vw] md:w-180 aspect-square -rotate-90 -right-80 sm:-bottom-130 sm:-right-1/12 z-50
+          className="leaf leaf-4 absolute w-[110vw] sm:w-[140vw] md:w-180 aspect-square -rotate-90 -right-80 sm:-bottom-130 sm:-right-1/12 sm:rotate-0 z-50
           bg-[url('/images/leaves/leaf3.png')] bg-contain bg-no-repeat bg-center"
         />
       </section>
@@ -151,14 +151,14 @@ export default function Home() {
       <section className="h-screen bg-linear-to-l from-[#FFFEFE26] to-[#DFE2D2] text-[#4E482E] font-lexend flex items-center justify-center">
         <div
           id="ourStory"
-          className="max-w-7xl p-6 sm:p-10 md:p-14 flex flex-col sm:flex-row justify-between items-center gap-8 sm:gap-16 md:gap-40 lg:gap-75"
+          className="max-w-7xl p-6 sm:p-10 md:p-14 flex flex-col justify-end h-full  sm:flex-row sm:justify-between sm:items-center gap-8 sm:gap-16 md:gap-40 lg:gap-75"
         >
           <Image
             src="/images/p1.png"
             alt="Bottle"
             height={1000}
             width={10000}
-            className="w-[80vw] sm:w-[40vw] md:w-150"
+            className="w-[80vw] sm:w-[40vw] md:w-150 hidden md:block"
           />
           <Image
             src="/images/p2.png"
